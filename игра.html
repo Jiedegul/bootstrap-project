@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>игра</title>
+</head>
+<body>
+
+<script>	
+	let tapty = false;
+	let big = 150;
+	let less = 1;
+	let number = parseInt((big + less) / 2);
+	alert ('${less} - ${big} аралыктагы санды танда')
+	while (!tapty) {
+		const otvet = prompt('50')
+		if (otvet === 'yes') {
+			tapty = true
+            alert('я супер')
+		}else if (otvet === 'big') {
+			less = number;
+			number = parseInt((big + number) / 2)
+		}else if (otvet === 'less') {
+			big = number;
+			number = parseInt((less + number) / 2)
+		}
+		
+	}
+</script>
+</body>
+</html>

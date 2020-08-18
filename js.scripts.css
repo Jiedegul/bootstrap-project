@@ -1,0 +1,19 @@
+var rounda =new Vue(
+	{el: "#rounda",
+	data:{
+		time:10,
+		active:"green"}}); 
+var roundb =new vue(
+	{el: "#roundb",
+	data:{
+		time:10,
+		active:"red"}});
+	setInterval(function()
+					if (rounda.time< 1){
+			rounda.active=round1.active=="red" ? "green" : "red";
+			rounda.time = 10;}
+					if (roundb.time< 2){
+			roundb.active=round1.active=="red" ? "green" : "red";
+			roundb.time = 10;}
+			rounda.time--;
+			roundb.time--;}.1000);

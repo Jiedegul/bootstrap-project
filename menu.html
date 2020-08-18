@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Home work</title>
+<head>
+    <style>
+        .menu {
+            border: 1px solid lightgray;
+            width: 300px;
+            min-height: 300px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: lightgray;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .element {
+            display: flex;
+            margin: 10px;
+        }
+
+        .element div:nth-child(2) {
+            margin-left: auto;
+        }
+
+        input {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <h1>Меню</h1>
+    <div style="text-align: left">
+        name<input type="text" id="add-tamak"> <br>
+        price <input type="number" id="add-price">
+        <button onclick="addTamak()">Submit</button>
+    </div>
+    <div id="menu-container" class="container">
+
+        <div id="menu1" class="element">
+            <div class="name">Манты</div>
+            <div class="sena">150</div>
+            <div class="select"><input id="select1" onchange="selected(this)" type="checkbox"/></div>
+        </div>
+
+        <div id="menu2" class="element">
+            <div class="name">Шорпо</div>
+            <div class="sena">50</div>
+            <div class="select"><input id="select2" onchange="selected(this)" type="checkbox"/></div>
+        </div>
+        <div id="menu3" class="element">
+            <div class="name">Беш бармак</div>
+            <div class="sena">200</div>
+            <div class="select"><input id="select3" onchange="selected(this)" type="checkbox"/></div>
+        </div>
+        <div id="menu4" class="element">
+            <div class="name">Курдак</div>
+            <div class="sena">220</div>
+            <div class="select"><input id="select4" onchange="selected(this)" type="checkbox"/></div>
+        </div>
+    </div>
+    <div>Акчасы: <span id="price">0</span></div>
+</div>
+
+<script>
+    const selected = (elem) => {
+        const price = +elem.parentElement.parentElement.children[1].innerText;
+        const priceAll = document.getElementById('price');
+        if (elem.checked) {
+            priceAll.innerText = +priceAll.innerText + price
+        } else {
+            priceAll.innerText = +priceAll.innerText - price
+        }
+    }
+
+    const addTamak = () => {
+        const add = document.getElementById('add-tamak')
+        const price = document.getElementById('add-price')
+        const tamak = add.value;
+        const priceV = price.value;
+        if (tamak && priceV) {
+            const item = document.createElement('div')
+            item.innerHTML = ` <div id="menu2" class="element"><div class="name">${tamak}</div>
+            <div class="sena">${priceV}</div>
+            <div class="select"><input id="select3" onchange="selected(this)" type="checkbox"/></div>`
+            document.getElementById('menu-container').appendChild(item);
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

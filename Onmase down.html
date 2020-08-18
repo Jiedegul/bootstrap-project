@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onmouse down</title>
+	<style type="text/css">
+		.my-class{
+			display: inline-block;
+			width: 80px;
+			height: 80px;
+			margin: 10px;
+			background : green;
+			padding: 10px;
+		}
+        .container {
+        	display: flex;
+        }
+	</style>
+</head>
+<body>
+	17.06.2020,
+    <div class="container">
+    <div  id="div1" class="my-class" onmousedown="changeCicle()" onmouseup="changeSquare()"></div>
+    <div id="div2" class="my-class" onclick="setText()">0</div>
+	</div>
+
+
+<script type="text/javascript">
+	const changeCicle = () => { 
+		 document.getElementById('div1').style.borderRadius ='50%';
+    }
+	const changeSquare = () => {
+          document.getElementById('div1').style.borderRadius ='0%';
+	}
+	const setText = () => {
+		const div2 = document.getElementById('div2')
+		div2.innerHTML = + div2.innerHTML + 1
+	}
+</script>
+
+</body>
+</html>

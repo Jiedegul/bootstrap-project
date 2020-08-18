@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			font-family: Arial,Helvetica,sans-serif;
+			background-color: black; 
+		}
+		*{box-sizing: border-box;}
+		.container{
+			padding: 16px;
+			background-color: white;
+		}
+		input[type=text],input[type=password]{
+			width: 100%;
+			padding: 15px;
+			margin: 5px 0 22px 0;
+			display: none;
+			background-color: #f1f1f1;
+		}
+		input[type=text]:focus,input[type=password]:focus{
+			background-color: #ddd;
+			outline: none;}
+		hr{
+			border:1px solid #f1f1f1;
+			margin-bottom: 25px;
+		}
+
+		.registerbtn{
+			background-color: #880000;
+			color: white;
+			padding: 16px 20px;
+			margin: 8px 0;
+			border:none;
+			cursor: pointer;
+			width: 100%;
+			opacity: 0.9;}
+
+			.registerbtn:hover{
+				opacity: 1;
+			}
+			a{
+				color: dodgerblue;
+			}
+	.signin{
+		background-color: #4169E1;
+		text-align: center;
+
+}</style>
+</head>
+<body>
+	<script type="text/javascript">
+	var button=document.getElementByTagllame("button")[0];
+	var email=document.getElementByTagllame("button")[0];
+	var Пороль=document.getElementByTagllame("button")[1];
+	var Повторит пороль=document.getElementByTagllame("button")[2];
+	
+		button.onlick=function(){
+			console.log(well come);
+			console.log(email.value);
+			console.log(Пороль.value);
+			console.log(Повторит пароль.value);}
+		</script>
+		<form action="/action_page.php">
+	<div class="container">
+		<h1>Регистрация</h1>
+		<p>пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+		<hr>
+	<label for="email"><b>Email</b></label>
+	<input type="text" placeholder="Enter Email" name="email" required>
+	<hr>
+
+	<label for="psw"><b>Пороль</b></label>
+	<input type="password" placeholder="Enter Password" name="psw" required>
+
+	<label for="psw-repeat"><b>Повторит пороль</b></label>
+	<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+	<hr>
+	<p>Создавая аккаунт, вы соглашаетсь с нашими.
+    <a href="#">Условиями и Конфиденциальностью</a></p>
+
+    <button type="submit" class="registerbtn"></button>
+    
+    <div class="container signin">
+    	<p>Уже есть аккаунт?
+    <a href="#">Sign in </a>.</p>
+    </div>
+</form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			font-family: Arial,Helvetica,sans-serif;
+			background-color: black; 
+		}
+		*{box-sizing: border-box;}
+		.container{
+			padding: 16px;
+			background-color: white;
+		}
+		
+
+		.registerbtn{
+			background-color: #880000;
+			color: white;
+			padding: 16px 20px;
+			margin: 8px 0;
+			border:none;
+			cursor: pointer;
+			width: 100%;
+			opacity: 0.9;}
+
+			.registerbtn:hover{
+				opacity: 1;
+			}
+			a{
+				color: dodgerblue;
+			}
+	.signin{
+		background-color: #4169E1;
+		text-align: center;
+
+}</style>
+</head>
+<body>
+	<script type="text/javascript">
+	var фамилия=document.getElementByTagllame("button")[0];
+	var имя=document.getElementByTagllame("button")[1];
+	var email=document.getElementByTagllame("button")[2];
+	var пороль=document.getElementByTagllame("button")[3];
+	
+		button.onlick=function(){
+			console.log(well come);
+			console.log(email.value);
+			console.log(пороль.value);
+			console.log(ФИО.value);}
+			
+
+
+		</script>
+		<form action="/action_page.php">
+	<div class="container">
+		<h1>Регистрация</h1>
+		<label for="name"><p>ФИО</p></label><br>
+	<label for="email"><b>email</b></label>
+	<input type="text" placeholder="Enter Email" name="email" required><br>
+
+	<label for="psw"><b></b>пороль</label>
+	<input type="password" placeholder="Enter Password" name="psw" required><br>
+
+	<label for="psw-repeat"><b>повторит пороль</b></label>
+	<input type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+	<hr>
+	<p>Создавая аккаунт, вы соглашаетсь с нашими.
+    <a href="#">Условиями и Конфиденциальностью</a></p>
+
+    <button type="submit" class="registerbtn">регистрация</button>
+    
+    <div class="container signin">
+    	<p>Уже есть аккаунт?
+    <a href="#">Sign in </a>.</p>
+    </div>
+</form>
+</body>
+</html>
+

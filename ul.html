@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Светофор</title>
+	<link rel="js.scripts.css" type="text/css" href="style.css">
+	<style type="text/css">
+		div{background-color:black;
+			width: 250px;height: 600px;
+			margin: 33px;
+			padding: 15px;
+			border:10px solid grey;
+		}
+		.round1{width:80px;
+			height:80px;
+			background-color: red;
+			border-radius:100%;}
+		.round2{width:80px;
+			height:80px;
+			background-color: yellow;
+			border-radius:100%;
+			position:  relative;}
+			span{position:  absolute;
+				top: 20%;}
+		.round3{width:80px;
+			height:80px;
+			background-color:green;
+			border-radius:100%;}
+	</style>
+</head>
+<body>
+	<div id="a">
+		<center>
+			<div class="round1" v-bind:class="{"red": active=="red"}"></div>
+			<br>
+			<div class="round2"><span>{{time}}</span></div>
+			<br>
+			<div class="round3" v-bind:class="{"green" active =="green"}"></div>
+		</center>
+	</div>
+	<div id="b">
+		<center>
+			<div class="round1" v-bind:class="{red": active=="red"}></div>
+			<br>
+			<div class="round2"><span>{{time}}</span>></div>
+			<br>
+			<div class="round3" v-bind:class="{green" active =="green"}></div>
+		</center>
+		<script type="text/javascript" src="vue.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+
+	</div>
+</body>
+</html>

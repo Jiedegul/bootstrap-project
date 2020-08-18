@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@keyframes asan{
+			0%{
+				width: 10px;
+				background-color: green;
+			}
+			100% {
+				width: 100px;
+				background-color: blue;}
+			}
+
+		@keyframes moov{
+			0%{
+				left: 0;
+				top: 0;
+			}
+
+			25%{
+				left: 400px;
+				top: 0;
+			}
+
+			50%{
+				top: 400px;
+				left: 400px;
+			}
+
+			75%{
+				top:400px;
+				left: 0;
+			}
+
+			100%{
+				left: 0;
+				top: 0;
+			}
+		}
+
+		.conteiner{ 
+			width: 500px;
+			height: 500px;
+			background-color: red;position: relative;
+			}
+			.a{width: 500px;
+				height: 500px;
+				background-color: yellow;
+				position: relative;}
+			.b{width: 100px;
+				height: 100px;
+				background-color: black;position: absolute;
+			animation-name: moov;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			}
+	</style>
+</head>
+<body>
+	<div class="conteiner">
+		<div class="a"></div>
+		<div class="b"></div>
+	</div>
+
+</body>
+</html>

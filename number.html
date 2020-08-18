@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        input {
+            margin-left: 5px;
+        }
+        .row {
+            margin: 10px;
+            display: flex;
+        }
+        .row .operator {
+            background-color: lightgray;
+            border-radius: 5px;
+            padding: 5px;
+            width: 20px;
+            text-align: center;
+            margin-right: 5px;
+        }
+        #answer {
+            margin-left: 5px;
+        }
+    </style>
+    <title>Home work</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        Number 1 <input id="number1" type="number" name="num1" value="0"/>
+    </div>
+    <div class="row">
+        Number 2 <input id="number2" type="number" name="num2" value="0"/>
+    </div>
+    <div class="row">
+        <div onclick="plus()" id="plus" class="operator">+</div>
+        <div id="minus" class="operator">-</div>
+        <div id="times" class="operator">*</div>
+        <div id="division" class="operator">/</div>
+        Answer: <div id="answer">0</div>
+    </div>
+</div>
+
+<script>
+
+    const plus = () => {
+        const number1 = +document.getElementById('number1').value
+        const number2 = +document.getElementById('number2').value
+        document.getElementById('answer').innerText = number1+number2
+    }
+
+
+</script>
+
+
+</body>
+</html>

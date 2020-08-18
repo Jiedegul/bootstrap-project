@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #question {
+            padding: 10px;
+        }
+
+        .container {
+            height: 200px;
+            overflow: auto;
+            border: 1px solid lightgray;
+            align-content: flex-end;
+        }
+
+        .container p {
+            padding: 0.5em;
+            border: 1px solid green;
+            width: fit-content;
+            margin-left: 20px;
+            border-radius: 5px;
+        }
+
+        .container .self {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Chat bot</h1>
+
+<div>
+    <div id="chat" class="container">
+
+    </div>
+    <div id="answer-write" class="hide">
+        <br>
+        <input id="answer"> <button onclick="submitAnswer()">Submit</button>
+    </div>
+    <br/>
+    <textarea id="question" name="w3review" rows="4" cols="50"></textarea>
+    <br><br>
+    <button onclick="submit()">Submit</button>
+
+</div>
+
+<script>
+    const question = document.getElementById('question')
+    const chat = document.getElementById('chat')
+    const answer = document.getElementById('answer')
+    const answerWrite = document.getElementById('answer-write')
+
+
+    const setMessage = (answer) => {
+        const bot = document.createElement('p')
+        bot.className = 'bot'
+        bot.innerText = 'печатает...';
+        chat.appendChild(bot)
+        setTimeout(() => {
+            bot.innerText = answer;
+        }, 1000)
+        question.value = '';
+    }
+    const submit = () => {
+
+        const value = question.value.trim()
+
+        if (value.length === 0) return;
+
+        const answer = localStorage.getItem(value)
+        if (answer) {
+            setMessage(answer)
+        } else {
+            answerWrite.className = ''
+        }
+    }
+
+    const submitAnswer = () => {
+        const value = answer.value.trim()
+        if (value.length ===0)return;
+        localStorage.setItem(question.value.trim(),value)
+        answer.value = '';
+        answerWrite.className = 'hide'
+        setMessage(value)
+    }
+</script>
+
+</body>
+</html>

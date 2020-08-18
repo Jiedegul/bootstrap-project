@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>almashturuuu</p>
+	<script type="text/javascript">
+		const data=prompt();
+		const a =data.split(`?`);
+		if(a[1]=='usd'){
+		alert(`${a[0]*78}som`);
+	}
+	else{
+		alert(`${a[0]/78}usd`);
+	}
+
+		// console.log(`${a[0]*78}som`);
+		// jassa bolot
+	const data1=prompt();
+		const a1 =data1.split(`?`);
+		if(a1[1]=='usd'){
+		console.log(`${a1[0] *78}som`);
+	}
+	else if(a[1]==='som'){
+		console.log(`${a1[0] /78}usd`);
+	}
+
+	</script>
+	<script type="text/javascript">
+		const currency=[
+		{title: 'rub',value: 1.8},
+		{title: 'usd',value: 78},
+		{title: 'tenge',value: 0.21},
+		];
+		const data2=prompt();
+		const a2=data2.split(``);
+
+		for(let i=0; i<3; i++){
+			// for(let i=0; i<currency.lenght; i++)
+			if(currency[i].title===a2[1]){
+				console.log(`${currency[i].value *a2[0]}som`);
+			}
+		}
+
+	</script>
+	<script type="text/javascript">
+		const currency1=[
+		{title: 'rub',value: 1.8},
+		{title: 'usd',value: 78},
+		{title: 'tenge',value: 0.21},
+		];
+		const data3=prompt();
+		const a3=data3.split(``);
+
+
+		let i=0;
+		let found=false;
+		while( i<currency.lenght && !found){
+	// while( i<currency.lenght && found===false; i++)
+			if(currency[i].title===a3[1]){
+				console.log(`${currency[i].value *a3[0]}som`);
+				found=true;
+
+			}
+			else{
+				console.log(`${currency[i].title}emes!`);
+			}
+			i++;
+		}
+// massiv ichindegi obrashenie
+// uslovie skobkanun ichinde jasulat
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

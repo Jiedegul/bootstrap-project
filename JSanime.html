@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: pink;
+    }
+
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: blue;
+    }
+</style>
+<body>
+
+<p>
+    <button onclick="animatedFunc()">Click Me</button>
+</p>
+
+<div id="container">
+    <div id="animate"></div>
+</div>
+
+<script>
+    const animatedFunc = () => {
+        const animate = document.getElementById('animate');
+        let p = 0;
+
+        const step = () => {
+            if (p >= 350){
+                clearInterval(interval)
+            }
+            p++
+            animate.style.top = p + 'px';
+            animate.style.left = p + 'px';
+        }
+
+        const interval = setInterval(step, 10);// 1000 = 1s
+    }
+
+
+</script>
+
+</body>
+</html>

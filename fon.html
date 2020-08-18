@@ -1,0 +1,38 @@
+<_!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+		div{position: relative;
+			width: 600px;
+			height: 500px;}
+
+		img{position: absolute;
+				width: 600px;
+				height: 500px;
+				z-index: 1;}
+		.span{position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			top: -50%;
+			left: 250px;
+			transform: translate(-50%);
+			transition: 0,5s all;
+			z-index: 2
+			opacity:0,5;}
+
+		div:hover .span{
+			top: 50%;
+			left: 250px;}}
+
+	</style>
+</head>
+<body>
+	<div>
+		<img src="https://s1.1zoom.ru/big0/235/Poppies_Summer_Grasslands_Trees_562184_1270x1024.jpg"><span class="span"></span>
+	</div>
+
+</body>
+</html>

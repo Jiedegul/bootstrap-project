@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>bankovskii karta</h1>
+	<script type="text/javascript">
+		const CARDS=[
+		{
+			login:'asan',
+			pin:'1234',
+			balance: 10000
+		},
+		
+		{
+		    login:'uson',
+			pin:'4321',
+			balance: 20000
+		},
+		{
+			login:'aybek',
+			pin:'1212',
+			balance: 30000
+		}];
+		let attempts=3;
+		// attempts poputka
+		let found=false;
+			do{
+		const LOGIN=prompt(`loging?`);
+		const PIN=prompt(`PIN code?`);
+
+		let i=0;
+			while(found === false && i <CARDS.length){
+					if(CARDS[i].login === LOGIN && CARDS[i].pin === PIN){
+					console.log(`WELL COME! Your balance:${CARDS[i].balance}som`);
+					found=true;
+					}
+					i++;
+					}
+		
+				if (found === false	) {
+				
+				attempts--;
+				if(attempts === 0){
+					console.log(`ваша карта заблокирована:`);
+				}
+				// poputkanu kemitet
+				}
+				}
+			while(found === false && attempts> 0);
+			// poputkasu bar bolso ishtesh kerek
+		</script>
+</body>
+</html>

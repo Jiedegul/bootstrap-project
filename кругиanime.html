@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>круг кругу друг!</title>
+	<style type="text/css">
+		@keyframes first {
+			0%{
+			transform: rotate(0deg);
+			top: 0%;
+			left:3%;
+	
+		}
+		25%{transform: rotate(110deg);
+			top: 0%;
+			left: 40%;}
+		50%{transform:rotate(150deg)
+			top: 0%;
+			left: 70%;}
+		75%{transform: rotate(250deg);}
+
+		100%{transform:rotate(360deg);}}
+
+		first:hover{
+			animation-play-state: stop;
+		}
+		.a{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			border-radius: 20%;
+
+			animation-name: first;
+			animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function:  linear;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>круг кругу друг!</h1>
+     <div class="a"></div>
+</body>
+</html>

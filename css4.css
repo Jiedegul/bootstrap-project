@@ -1,0 +1,24 @@
+body {background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQOhzaLKeV01MvmCt-ubcBFdzjJuLZk1Aeu9h18to4YbQLKK39Y");
+width: 600px;
+height: 600px;}
+#header {
+	background: #3d3c66;
+	height: 200px;
+	margin-bottom: 10px;
+}
+ #content{background: #3d3c66;
+ 	min-height: 500px;
+ 	width: 70px;
+ 	float: left;}
+
+ 	#aside{
+ 		background: #3d3c66;
+ 		min-height: 500px;
+ 	width: 30px;
+ 	float: left;}
+
+ 	#footer {background: #3d3c66;
+	height: 200px;
+	margin-bottom: 10px;
+
+ 	}
